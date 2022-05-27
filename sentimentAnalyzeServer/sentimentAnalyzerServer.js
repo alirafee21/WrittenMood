@@ -76,7 +76,7 @@ function analyzeEmotionUrl(url,res){
 };
 naturalLanguageUnderstanding.analyze(analyzeParams)
   .then(analysisResults => {
-    console.log(JSON.stringify(analysisResults, null, 2));
+    // console.log(JSON.stringify(analysisResults, null, 2));
    // return analysisResults.result.emotion.document.emotion;
    res.send(analysisResults.result.emotion.document.emotion);
   })
@@ -98,7 +98,7 @@ function analyzeEmotionText(sampleText,res){
 };
 naturalLanguageUnderstanding.analyze(analyzeParams)
   .then(analysisResults => {
-    console.log(JSON.stringify(analysisResults, null, 2));
+    // console.log(JSON.stringify(analysisResults, null, 2));
    // return analysisResults.result.emotion.document.emotion;
    res.send(analysisResults.result.emotion.document.emotion);
   })
@@ -123,7 +123,7 @@ function analyzeSentimentText(sampleText,res){
 
     naturalLanguageUnderstanding.analyze(analyzeParams)
       .then(analysisResults => {
-        console.log(JSON.stringify(analysisResults, null, 2));
+        // console.log(JSON.stringify(analysisResults, null, 2));
         //.result.entities[0].sentiment
          res.send(analysisResults.result.sentiment.document.label);
         
@@ -149,7 +149,7 @@ function analyzeSentimentUrl(url,res){
 
     naturalLanguageUnderstanding.analyze(analyzeParams)
       .then(analysisResults => {
-        console.log(JSON.stringify(analysisResults, null, 2));
+        // console.log(JSON.stringify(analysisResults, null, 2));
          res.send(analysisResults.result.sentiment.document.label);
       })
       .catch(err => {
